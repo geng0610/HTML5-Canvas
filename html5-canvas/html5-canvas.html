@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+</head>
+<body>
+	<canvas id="c" width = "500" height = "500"></canvas>
+	<script>
+	var c = document.querySelector("#c");
+	var tri =c.getContext("2d");
+	//tri.fillRect(100,100,100,100);
+	//tri.strokeRect(50,50,50,50);
+	/*tri.beginPath();
+	tri.moveTo(75,75);
+	tri.lineTo(125,75);
+	tri.lineTo(125,125);
+	tri.lineTo(75,75);
+	tri.fill();
+
+	var square=c.getContext("2d");
+	square.beginPath();
+	square.moveTo(50,50);
+	square.lineTo(50,150);
+	square.lineTo(150,150);
+	square.lineTo(150,50);
+	square.lineTo(50,50);
+	square.stroke();*/
+
+	var phrase=c.getContext("2d");
+	phrase.textAlign = "center";
+	phrase.font = "36px Impact";
+	phrase.fillStyle = "green";
+	phrase.fillText("CANVAS MEMES", c.width/2,50);
+	phrase.strokeStyle = "black";
+	phrase.lineWidth = 3;
+	phrase.strokeText("CANVAS MEMES", c.width/2,50);
+
+	</script>
+</body>
+</html>
