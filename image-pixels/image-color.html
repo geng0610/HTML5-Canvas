@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+</head>
+<body>
+	<canvas id="c" width = "500" height = "500"></canvas>
+	<script>
+	var c = document.querySelector("#c");
+	var ctx =c.getContext("2d");
+	//ctx.fillStyle="white";
+	//ctx.fillRect(10,10,50,50);
+	var pixels = ctx.getImageData(0,0,500,500);
+	console.log(pixels.data);
+	for(i = 0; i<pixels.data.length/4;i += 12){
+		pixels.data[i*4+1]=255;
+		pixels.data[i*4+3]=255;
+	}
+	console.log(pixels.data);
+	ctx.putImageData(pixels,0,0);
+	</script>
+</body>
+</html>
